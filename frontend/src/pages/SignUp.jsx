@@ -13,9 +13,7 @@ export default function SignUp() {
 };
 const handleSubmit = async (e) => {
   e.preventDefault();
-  
-   
-    // console.log(JSON.stringify(formData));
+
     const res = await fetch('/api/auth/signup',{
       
       method : 'POST',
@@ -30,7 +28,7 @@ const handleSubmit = async (e) => {
     const data = await res.json();
     console.log(data);
   };
- //console.log(formData);
+ console.log(formData);
   
   return (
     <div className='p-3 max-w-lg mx-auto'>
